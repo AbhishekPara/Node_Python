@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   let dataToSend
   let largeDataSet = []
   // spawn new child process to call the python script
-  const python = spawn('py', ['script1.py'])
+  const python = spawn('python', ['script1.py'])
 
   // collect data from script
   python.stdout.on('data', function (data) {
